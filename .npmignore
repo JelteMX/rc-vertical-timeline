@@ -5,3 +5,4 @@ stories
 coverage
 rollup.config.js
 .prettierignore
+docs
