@@ -16,9 +16,7 @@
     "release": "del-cli ./build && rollup -c && del-cli ./build/components/__tests__",
     "lint": "standard",
     "format": "prettier-standard --format",
-    "deploy-storybook": "storybook-to-ghpages -o docs",
-    "build-storybook": "build-storybook -o docs",
-    "storybook-to-ghpages-via-ci": "storybook-to-ghpages --ci -o docs",
+    "build-storybook": "build-storybook -o docs --quiet",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 9001",
     "prepare": "npm run release",
@@ -31,7 +29,8 @@
   "homepage": "https://jeltemx.github.io/rc-vertical-timeline",
   "keywords": [
     "vertical-timeline",
-    "react-components"
+    "react-components",
+    "react"
   ],
   "author": {
     "name": "Jelte Lagendijk",
