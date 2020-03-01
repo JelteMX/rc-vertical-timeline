@@ -14,7 +14,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm run deploy-storybook-ci
+    - run: npm run storybook-to-ghpages-via-ci
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
