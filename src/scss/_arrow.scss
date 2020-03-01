@@ -1,0 +1,17 @@
+.rc-vertical-timeline-element-content-arrow {
+    content: '';
+    position: absolute;
+    top: $arrowTop;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: $arrowSize solid transparent;
+    border-right: $arrowSize solid $contentPaneColor;
+
+}
+
+.rc-vertical-timeline-element--no-children {
+    .rc-vertical-timeline-element-content-arrow {
+        display: none;
+    }
+}

@@ -1,0 +1,110 @@
+.rc-vertical-timeline-element-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $iconSize;
+    height: $iconSize;
+    border-radius: 50%;
+    background: $contentPaneColor;
+    box-shadow: $iconBoxShadow;
+
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+
+    svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+    }
+}
+
+@media only screen and (min-width: $contentBreakpointMax) {
+    .rc-vertical-timeline--two-columns {
+        .rc-vertical-timeline-element-icon {
+            width: $iconSizeBig;
+            height: $iconSizeBig;
+            left: 50%;
+            margin-left: 0 - ($iconSizeBig / 2);
+        }
+    }
+}
+
+.rc-vertical-timeline--animate {
+    .rc-vertical-timeline-element-icon {
+        &.is-hidden {
+            visibility: hidden;
+        }
+        .bounce-in {
+            visibility: visible;
+            -webkit-animation: cd-bounce-1 0.6s;
+            -moz-animation: cd-bounce-1 0.6s;
+            animation: cd-bounce-1 0.6s;
+        }
+    }
+}
+
+@-webkit-keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        -moz-transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}

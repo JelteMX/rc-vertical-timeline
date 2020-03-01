@@ -1,0 +1,80 @@
+.rc-vertical-timeline-element-content {
+    position: relative;
+    margin-left: 60px;
+    background: $contentPaneColor;
+    border-radius: 0.25em;
+    padding: 1em;
+    box-shadow: 0 3px 0 #ddd;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    p,
+    .rc-vertical-timeline-element-date {
+        font-weight: 500;
+    }
+
+    .rc-vertical-timeline-element-date {
+        display: inline-block;
+        float: left;
+        padding: .8em 0;
+        opacity: .7;
+    }
+}
+
+.rc-vertical-timeline-element--no-children {
+    .rc-vertical-timeline-element-content {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (min-width: $contentBreakpointMax) {
+    .rc-vertical-timeline--two-columns {
+        .rc-vertical-timeline-element-content {
+            margin-left: 0;
+            padding: 1.5em;
+            width: 44%;
+        }
+
+        .rc-vertical-timeline-element-content-arrow {
+            top: 24px;
+            left: 100%;
+            transform: rotate(180deg);
+        }
+
+        .rc-vertical-timeline-element-content {
+            .rc-vertical-timeline-element-date {
+                position: absolute;
+                width: 100%;
+                left: 124%;
+                top: 9px;
+            }
+        }
+
+        .rc-vertical-timeline-element:nth-child(even):not(.rc-vertical-timeline-element--left) .rc-vertical-timeline-element-content,
+        .rc-vertical-timeline-element.rc-vertical-timeline-element--right .rc-vertical-timeline-element-content {
+            float: right;
+        }
+
+        .rc-vertical-timeline-element:nth-child(even):not(.rc-vertical-timeline-element--left) .rc-vertical-timeline-element-content-arrow,
+        .rc-vertical-timeline-element.rc-vertical-timeline-element--right .rc-vertical-timeline-element-content-arrow {
+            top: 24px;
+            left: auto;
+            right: 100%;
+            transform: rotate(0deg);
+        }
+
+        .rc-vertical-timeline-element:nth-child(even):not(.rc-vertical-timeline-element--left) .rc-vertical-timeline-element-content .rc-vertical-timeline-element-date,
+        .rc-vertical-timeline-element.rc-vertical-timeline-element--right .rc-vertical-timeline-element-content .rc-vertical-timeline-element-date {
+            left: auto;
+            right: 124%;
+            text-align: right;
+        }
+    }
+
+
+}

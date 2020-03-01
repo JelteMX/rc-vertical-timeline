@@ -1,0 +1,45 @@
+.rc-vertical-timeline-element {
+  position: relative;
+  margin: $elementMarginSmall 0;
+
+  > div {
+    min-height: 1px;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .rc-vertical-timeline-element-inner {
+    >:first-child {
+      margin-top: 0;
+    }
+    >:last-child {
+        margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $contentBreakpointMax) {
+  .rc-vertical-timeline-element {
+    margin: $elementMarginBig 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

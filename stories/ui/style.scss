@@ -1,0 +1,36 @@
+body {
+    background: #DDD;
+    font-family: "Nunito Sans",-apple-system,".SFNSText-Regular","San Francisco",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.sbdocs-preview {
+    background: #DDD!important;
+}
+
+$color-blue: #2196f3;
+$color-red: #e91e63;
+$color-white: #FFFFFF;
+
+.element {
+    &--work {
+        .icon {
+            background: $color-blue;
+            color: $color-white;
+        }
+    }
+    &--education {
+        .icon {
+            background: $color-red;
+            color: $color-white;
+        }
+    }
+    &--blue {
+        .pane {
+            background: $color-blue;
+            color: $color-white;
+        }
+        .rc-vertical-timeline-element-content-arrow {
+            border-right-color: $color-blue;
+        }
+    }
+}
