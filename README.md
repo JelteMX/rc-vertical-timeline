@@ -1,6 +1,12 @@
 ![Build](https://github.com/JelteMX/rc-vertical-timeline/workflows/Build/badge.svg)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jeltemx/rc-vertical-timeline/issues)
+[![dependencies Status](https://david-dm.org/jeltemx/rc-vertical-timeline/status.svg)](https://david-dm.org/jeltemx/rc-vertical-timeline)
+[![devDependencies Status](https://david-dm.org/jeltemx/rc-vertical-timeline/dev-status.svg)](https://david-dm.org/jeltemx/rc-vertical-timeline?type=dev)
 
 # rc-vertical-timeline-component - Vertical Timeline
+
+[![https://nodei.co/npm/rc-vertical-timeline.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/rc-vertical-timeline.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/rc-vertical-timeline)
+
 
 This is a rewrite of the [react-vertical-timeline-component](https://stephane-monnot.github.io/react-vertical-timeline) in Typescript. It adds a few small extra properties and is IE11 compatible
 
