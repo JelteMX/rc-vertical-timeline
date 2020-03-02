@@ -18,7 +18,7 @@ $ npm i rc-vertical-timeline
 ```code|lang-jsx
 ---
 import { VerticalTimeline, VerticalTimelineElement }  from 'rc-vertical-timeline';
-import 'rc-vertical-timeline/style.css';
+import 'rc-vertical-timeline/build/rc-vertical-timeline.min.css';
 ...
 <VerticalTimeline>
   <VerticalTimelineElement
