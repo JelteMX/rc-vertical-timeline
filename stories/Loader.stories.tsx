@@ -20,7 +20,7 @@ class InfiniteScroll extends Component<{}, InfiniteScrollState> {
     constructor(props) {
         super(props);
         this.state = { items: [
-            {}, {}, {}, {}, {}
+            {}, {}, {}, {}, {}, {}
         ] }
     }
     render() {
