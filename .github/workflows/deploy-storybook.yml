@@ -1,9 +1,13 @@
-name: Build, test and deploy storybook
+name: Build
 
 on:
   push:
     branches:
       - master
+    paths:
+        - '**.tsx'
+        - '**.ts'
+        - '**.js'
 
 jobs:
   build:

@@ -4,9 +4,17 @@ on:
   push:
     branches-ignore:
       - 'master'
+    paths:
+      - '**.tsx'
+      - '**.ts'
+      - '**.js'
   pull_request:
     branches:
       - master
+    paths:
+      - '**.tsx'
+      - '**.ts'
+      - '**.js'
 
 jobs:
   build:
