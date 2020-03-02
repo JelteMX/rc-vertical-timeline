@@ -4,7 +4,7 @@ This is a rewrite of the [react-vertical-timeline-component](https://stephane-mo
 
 ## Demo
 
-TBD
+See [storybook](https://jeltemx.github.io/rc-vertical-timeline/?path=/story/vertical-timeline--main)
 
 ## Install
 

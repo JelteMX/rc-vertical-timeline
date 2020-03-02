@@ -42,7 +42,7 @@ class InfiniteScroll extends Component<{}, InfiniteScrollState> {
 }
 
 
-export default { title: 'Loader' }
+export default { title: 'With Loader' }
 
 export const emptyWithLoader = () => (
     <VerticalTimeline loading>
