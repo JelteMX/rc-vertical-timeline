@@ -1,3 +1,5 @@
+![Build](https://github.com/JelteMX/rc-vertical-timeline/workflows/Build/badge.svg)
+
 # rc-vertical-timeline-component - Vertical Timeline
 
 This is a rewrite of the [react-vertical-timeline-component](https://stephane-monnot.github.io/react-vertical-timeline) in Typescript. It adds a few small extra properties and is IE11 compatible
