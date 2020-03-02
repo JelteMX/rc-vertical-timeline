@@ -1,6 +1,6 @@
 {
   "name": "rc-vertical-timeline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vertical Timeline React Component",
   "main": "build/index.js",
   "minified": "build/index.min.js",
@@ -13,14 +13,14 @@
   "scripts": {
     "clean": "del-cli ./build",
     "build": "del-cli ./build && rollup -c",
-    "release": "del-cli ./build && rollup -c && del-cli ./build/components/__tests__",
+    "minify-css": "postcss build/rc-vertical-timeline.css > build/rc-vertical-timeline.min.css",
+    "release": "del-cli ./build && rollup -c && npm run minify-css && del-cli ./build/components/__tests__",
     "lint": "standard",
     "format": "prettier-standard --format",
     "build-storybook": "build-storybook -o docs --quiet",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 9001",
-    "prepare": "npm run release",
-    "publish": "npm run deploy"
+    "prepare": "npm run test && npm run release"
   },
   "repository": {
     "url": "https://github.com/jeltemx/rc-vertical-timeline",
@@ -43,6 +43,8 @@
     "@material-ui/icons": "^4.9.1",
     "@storybook/addon-docs": "^5.3.14",
     "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-links": "^5.3.14",
+    "@storybook/addon-viewport": "^5.3.14",
     "@storybook/preset-typescript": "^1.2.0",
     "@storybook/react": "^5.3.14",
     "@testing-library/jest-dom": "^5.1.1",
@@ -54,8 +56,10 @@
     "@types/react-dom": "^16.9.5",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
+    "cssnano": "^4.1.10",
     "del-cli": "^3.0.0",
     "jest": "^25.1.0",
+    "postcss-cli": "^7.1.0",
     "react": "^16.8.6",
     "react-docgen-typescript-loader": "^3.6.0",
     "react-dom": "^16.8.6",
@@ -98,8 +102,6 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@storybook/addon-links": "^5.3.14",
-    "@storybook/addon-viewport": "^5.3.14",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react-visibility-sensor": "^5.1.1"

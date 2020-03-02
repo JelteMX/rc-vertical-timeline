@@ -33,7 +33,7 @@ export default {
   plugins: [
     external(),
     scss({
-      outputStyle: 'compressed'
+      output: './build/rc-vertical-timeline.css'
     }),
     resolve(),
     typescript({

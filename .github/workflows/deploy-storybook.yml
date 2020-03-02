@@ -9,6 +9,7 @@ on:
         - '**.ts'
         - '**.js'
         - '**.scss'
+        - '**.json'
 
 jobs:
   build:
